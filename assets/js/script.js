@@ -37,17 +37,17 @@ class Calculator {
         // Set chosen operation, previous operand and reset current operand
         this.operation = operation;
         this.previousOperand = this.currentOperand;
-        this.currentOperand = ''
+        this.currentOperand = '';
     }
 
-    // function to perform the computation
+    // Function to perform the computation
     compute() {
         let computation;
         const previous = parseFloat(this.previousOperand);
         const current = parseFloat(this.currentOperand);
-        // return if either prev or current is not a number
+        // Return if either prev or current is not a number
         if (isNaN(previous) || isNaN(current)) return;
-        // perform the computation based on the chosen operation
+        // Perform the computation based on the chosen operation
         switch (this.operation) {
             case '+':
                 computation = previous + current;
@@ -64,23 +64,54 @@ class Calculator {
             default:
                 return;
         }
-        // update the current operand with the result of the computation
+        // Update the current operand with the result of the computation
         this.currentOperand = computation;
         this.operation = undefined;
         this.previousOperand = '';
     }
 
+    // Function to format the display number
+    getDisplayNumber(number) {
+        // Convert the number to a string
+        const stringNumber = number.toString()
+        // Split the string into the integer and decimal parts
+        const integerDigits = parseFloat(stringNumber.split('.')[0])
+        const decimalDigits = stringNumber.split('.')[1]
+        // Create a variable to store the integer part of the number in display format
+        let integerDisplay
+        // If the integer part is not a number, set integerDisplay to an empty string
+        if (isNaN(integerDigits)) {
+            integerDisplay = ''
+        } else {
+            // Otherwise, format the integer part as a localised string with no fractional digits
+            integerDisplay = integerDigits.toLocaleString('en', {
+                maximumFractionDigits: 0
+            })
+        }
+        // If there are decimal digits, return the number in the format 'integerDisplay.decimalDigits'
+        if (decimalDigits != null) {
+            return `${integerDisplay}.${decimalDigits}`
+        } else {
+            // Otherwise, return just the formatted integer part
+            return integerDisplay
+        }
+    }
+
     // Update display method
     updateDisplay() {
-        // Set text content of current and previous operand elements
-        this.currentOperandTextElement.innerText = this.currentOperand;
+        // Set text content of current operand element to formatted current operand
+        this.currentOperandTextElement.innerText =
+            this.getDisplayNumber(this.currentOperand)
+        // If an operation is selected, set text content of previous operand element to formatted previous operand and operation symbol
         if (this.operation != null) {
-            this.previousOperandTextElement.innerText = `${this.previousOperand} ${this.operation}`
+            this.previousOperandTextElement.innerText =
+                `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+        } else {
+            // Otherwise, set text content of previous operand element to empty string
+            this.previousOperandTextElement.innerText = ''
         }
     }
 }
-
-
 
 // Select all buttons and elements with data attributes
 const numberButtons = document.querySelectorAll('[data-number]');
@@ -98,37 +129,37 @@ const calculator = new Calculator(previousOperandTextElement, currentOperandText
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
         // Append number to calculator and update display
-        calculator.appendNumber(button.innerText)
-        calculator.updateDisplay()
-    })
-})
+        calculator.appendNumber(button.innerText);
+        calculator.updateDisplay();
+    });
+});
 
 // Add click event listener to each operation button
 operationButtons.forEach(button => {
     button.addEventListener('click', () => {
         // Choose operation and update display
-        calculator.chooseOperation(button.innerText)
-        calculator.updateDisplay()
-    })
-})
+        calculator.chooseOperation(button.innerText);
+        calculator.updateDisplay();
+    });
+});
 
 // Add click event listener to equals button
 equalsButton.addEventListener('click', button => {
     // Compute calculation and update display
     calculator.compute();
     calculator.updateDisplay();
-})
+});
 
 // Add click event listener to all clear button
 allClearButton.addEventListener('click', button => {
     // Clear calculator and update display
     calculator.clear();
     calculator.updateDisplay();
-})
+});
 
 // Add click event listener to delete button
 deleteButton.addEventListener('click', button => {
     // Delete last digit and update display
     calculator.delete();
     calculator.updateDisplay();
-})
+});
