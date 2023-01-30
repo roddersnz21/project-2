@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
+/* Apply box-sizing and font-family to all elements */
 *,
 *::before,
 *::after {
@@ -8,9 +9,38 @@
     font-weight: normal;
 }
 
+/* Reset padding and margin for body and set background color */
 body {
     padding: 0;
     margin: 0;
     background: linear-gradient(to left, #bcd4e1, #4f6e5c);
+}
+
+/* Set calculator-grid display to grid and adjust properties */
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: minmax(120px, auto) repeat(5, 100px);
+}
+
+/* Set calculator-grid button properties */
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid black;
+    outline: none;
+    background-color: rgba(255, 255, 255, .65);
+}
+
+/* Set hover background-color for calculator-grid button */
+.calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+/* Span two columns for .span-two element */
+.span-two {
+    grid-column: span 2;
 }
 
