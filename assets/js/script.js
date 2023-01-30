@@ -1,8 +1,32 @@
-// Set calculator class to store element references for updating the display 
+// Calculator class will store element references for updating the display and constructor will take inputs and functions
 class Calculator {
     constructor(previousOperandandTextElement, currentOperandandTextElement) {
         this.previousOperandandTextElement = previousOperandandTextElement;
         this.currentOperandandTextElement = currentOperandandTextElement;
+    }
+
+    clear() {
+
+    }
+
+    delete() {
+
+    }
+
+    appendNumber(number) {
+
+    }
+
+    chooseOperation(operation) {
+
+    }
+
+    compute() {
+
+    }
+
+    updateDisplay() {
+        
     }
 }
 
