@@ -39,8 +39,34 @@ class Calculator {
         this.currentOperand = ''
     }
 
+    // function to perform the computation
     compute() {
-
+        let computation;
+        const previous = parseFloat(this.previousOperand);
+        const current = parseFloat(this.currentOperand);
+        // return if either prev or current is not a number
+        if (isNaN(previous) || isNaN(current)) return;
+        // perform the computation based on the chosen operation
+        switch (this.operation) {
+            case '+':
+            computation = previous + current;
+            break;
+            case '-':
+            computation = previous - current;
+            break;
+            case '*':
+            computation = previous * current;
+            break;
+            case '÷':
+            computation = previous / current;
+            break;
+            default:
+                return;
+        }
+        // update the current operand with the result of the computation
+        this.currentOperand = computation;
+        this.operation = undefined;
+        this.previousOperand = '';
     }
 
     // Update display method
