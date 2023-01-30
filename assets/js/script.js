@@ -45,7 +45,7 @@ class Calculator {
         let computation;
         const previous = parseFloat(this.previousOperand);
         const current = parseFloat(this.currentOperand);
-        // Return if either prev or current is not a number
+        // Return if either previous or current is not a number
         if (isNaN(previous) || isNaN(current)) return;
         // Perform the computation based on the chosen operation
         switch (this.operation) {
@@ -64,7 +64,7 @@ class Calculator {
             default:
                 return;
         }
-        // Update the current operand with the result of the computation
+        // Set the result as the current operand and reset previous operand and operation
         this.currentOperand = computation;
         this.operation = undefined;
         this.previousOperand = '';
