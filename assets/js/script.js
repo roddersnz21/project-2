@@ -1,8 +1,8 @@
 // Calculator class will store element references for updating the display and constructor will take inputs and functions
 class Calculator {
-    constructor(previousOperandandTextElement, currentOperandandTextElement) {
-        this.previousOperandandTextElement = previousOperandandTextElement;
-        this.currentOperandandTextElement = currentOperandandTextElement;
+    constructor(previousOperandTextElement, currentOperandTextElement) {
+        this.previousOperandTextElement = previousOperandTextElement;
+        this.currentOperandTextElement = currentOperandTextElement;
         // Call clear function to set default values
         this.clear();
     }
@@ -43,5 +43,5 @@ const operationButtons = document.querySelectorAll('[data-operation]');
 const equalsButton = document.querySelector('[data-equals]');
 const deleteButton = document.querySelector('[data-delete]');
 const allClearButton = document.querySelector('[data-all-clear]');
-const previousOperandandTextElement = document.querySelector('[data-previous-operand]');
-const currentOperandandTextElement = document.querySelector('[data-current-operand]');
+const previousOperandTextElement = document.querySelector('[data-previous-operand]');
+const currentOperandTextElement = document.querySelector('[data-current-operand]');
