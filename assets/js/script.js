@@ -3,10 +3,15 @@ class Calculator {
     constructor(previousOperandandTextElement, currentOperandandTextElement) {
         this.previousOperandandTextElement = previousOperandandTextElement;
         this.currentOperandandTextElement = currentOperandandTextElement;
+        // Call clear function to set default values
+        this.clear();
     }
 
+    // function to clear all values
     clear() {
-
+        this.currentOperand = '';
+        this.previousOperand = '';
+        this.operation = undefined;
     }
 
     delete() {
@@ -26,7 +31,7 @@ class Calculator {
     }
 
     updateDisplay() {
-        
+
     }
 }
 
