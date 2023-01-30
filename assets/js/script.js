@@ -14,8 +14,9 @@ class Calculator {
         this.operation = undefined;
     }
 
+    // Function to delete last character from current operand
     delete() {
-
+        this.currentOperand = this.currentOperand.toString().slice(0, -1);
     }
 
     // Function to append a number to the current operand
@@ -120,5 +121,12 @@ equalsButton.addEventListener('click', button => {
 allClearButton.addEventListener('click', button => {
     // Clear calculator and update display
     calculator.clear();
+    calculator.updateDisplay();
+})
+
+// Add click event listener to delete button
+deleteButton.addEventListener('click', button => {
+    // Delete last digit and update display
+    calculator.delete();
     calculator.updateDisplay();
 })
