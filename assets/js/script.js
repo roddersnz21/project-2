@@ -73,27 +73,25 @@ class Calculator {
     // Function to format the display number
     getDisplayNumber(number) {
         // Convert the number to a string
-        const stringNumber = number.toString()
+        const stringNumber = number.toString();
         // Split the string into the integer and decimal parts
-        const integerDigits = parseFloat(stringNumber.split('.')[0])
-        const decimalDigits = stringNumber.split('.')[1]
+        const integerDigits = parseFloat(stringNumber.split('.')[0]);
+        const decimalDigits = stringNumber.split('.')[1];
         // Create a variable to store the integer part of the number in display format
-        let integerDisplay
+        let integerDisplay;
         // If the integer part is not a number, set integerDisplay to an empty string
         if (isNaN(integerDigits)) {
-            integerDisplay = ''
+            integerDisplay = '';
         } else {
             // Otherwise, format the integer part as a localised string with no fractional digits
-            integerDisplay = integerDigits.toLocaleString('en', {
-                maximumFractionDigits: 0
-            })
+            integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 });
         }
         // If there are decimal digits, return the number in the format 'integerDisplay.decimalDigits'
         if (decimalDigits != null) {
-            return `${integerDisplay}.${decimalDigits}`
+            return `${integerDisplay}.${decimalDigits}`;
         } else {
             // Otherwise, return just the formatted integer part
-            return integerDisplay
+            return integerDisplay;
         }
     }
 
@@ -101,14 +99,14 @@ class Calculator {
     updateDisplay() {
         // Set text content of current operand element to formatted current operand
         this.currentOperandTextElement.innerText =
-            this.getDisplayNumber(this.currentOperand)
+            this.getDisplayNumber(this.currentOperand);
         // If an operation is selected, set text content of previous operand element to formatted previous operand and operation symbol
         if (this.operation != null) {
             this.previousOperandTextElement.innerText =
-                `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+                `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`;
         } else {
             // Otherwise, set text content of previous operand element to empty string
-            this.previousOperandTextElement.innerText = ''
+            this.previousOperandTextElement.innerText = '';
         }
     }
 }
