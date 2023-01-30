@@ -25,16 +25,29 @@ class Calculator {
         this.currentOperand = this.currentOperand.toString() + number.toString();
     }
 
+    // Choose operation method
     chooseOperation(operation) {
-
+        // Return if current operand is empty
+        if (this.currentOperand === '') return;
+        // Compute previous operation if previous operand is not empty
+        if (this.previousOperand !== '') {
+            this.compute();
+        }
+        // Set chosen operation, previous operand and reset current operand
+        this.operation = operation;
+        this.previousOperand = this.currentOperand;
+        this.currentOperand = ''
     }
 
     compute() {
 
     }
 
+    // Update display method
     updateDisplay() {
+        // Set text content of current and previous operand elements
         this.currentOperandTextElement.innerText = this.currentOperand;
+        this.previousOperandTextElement.innerText = this.previousOperand;
     }
 }
 
@@ -54,10 +67,18 @@ const calculator = new Calculator(previousOperandTextElement, currentOperandText
 
 // Add click event listener to each number button
 numberButtons.forEach(button => {
-	button.addEventListener('click', () => {
-      // Append number to calculator and update display
-	  calculator.appendNumber(button.innerText)
-	  calculator.updateDisplay()
-	})
-  })
+    button.addEventListener('click', () => {
+        // Append number to calculator and update display
+        calculator.appendNumber(button.innerText)
+        calculator.updateDisplay()
+    })
+})
 
+// Add click event listener to each operation button
+operationButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Choose operation and update display
+        calculator.chooseOperation(button.innerText)
+        calculator.updateDisplay()
+    })
+})
