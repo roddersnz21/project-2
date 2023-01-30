@@ -7,7 +7,7 @@ class Calculator {
         this.clear();
     }
 
-    // function to clear all values
+    // Function to clear all values
     clear() {
         this.currentOperand = '';
         this.previousOperand = '';
@@ -18,8 +18,11 @@ class Calculator {
 
     }
 
+    // Function to append a number to the current operand
     appendNumber(number) {
-        this.currentOperand = number;
+        // Prevent adding more than one decimal point
+        if (number === '.' && this.currentOperand.includes('.')) return;
+        this.currentOperand = this.currentOperand.toString() + number.toString();
     }
 
     chooseOperation(operation) {
