@@ -49,17 +49,17 @@ class Calculator {
         // perform the computation based on the chosen operation
         switch (this.operation) {
             case '+':
-            computation = previous + current;
-            break;
+                computation = previous + current;
+                break;
             case '-':
-            computation = previous - current;
-            break;
+                computation = previous - current;
+                break;
             case '*':
-            computation = previous * current;
-            break;
+                computation = previous * current;
+                break;
             case '÷':
-            computation = previous / current;
-            break;
+                computation = previous / current;
+                break;
             default:
                 return;
         }
@@ -113,5 +113,12 @@ operationButtons.forEach(button => {
 equalsButton.addEventListener('click', button => {
     // Compute calculation and update display
     calculator.compute();
+    calculator.updateDisplay();
+})
+
+// Add click event listener to all clear button
+allClearButton.addEventListener('click', button => {
+    // Clear calculator and update display
+    calculator.clear();
     calculator.updateDisplay();
 })
