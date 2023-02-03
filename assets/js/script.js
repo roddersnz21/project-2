@@ -70,6 +70,14 @@ class Calculator {
         this.previousOperand = '';
     }
 
+    // Function to calculate the percentage of a number
+    percentage() {
+        // Return if current operand is empty
+        if (this.currentOperand === '') return;
+        // Calculate the percentage of the current operand and set it as the current operand
+        this.currentOperand = parseFloat(this.currentOperand) / 100;
+}
+
     // Function to format the display number
     getDisplayNumber(number) {
         // Convert the number to a string
@@ -119,6 +127,7 @@ const deleteButton = document.querySelector('[data-delete]');
 const allClearButton = document.querySelector('[data-all-clear]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
+const percentageButton = document.querySelector('[data-percentage]');
 
 // Set calculator class to make variable operate in calculator object
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
@@ -159,5 +168,10 @@ allClearButton.addEventListener('click', button => {
 deleteButton.addEventListener('click', button => {
     // Delete last digit and update display
     calculator.delete();
+    calculator.updateDisplay();
+});
+
+percentageButton.addEventListener('click', () => {
+    calculator.percentage();
     calculator.updateDisplay();
 });
