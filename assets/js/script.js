@@ -171,7 +171,9 @@ deleteButton.addEventListener('click', button => {
     calculator.updateDisplay();
 });
 
+// Add click event listener to percentage button
 percentageButton.addEventListener('click', () => {
+    // Call percentage function and update display
     calculator.percentage();
     calculator.updateDisplay();
 });
