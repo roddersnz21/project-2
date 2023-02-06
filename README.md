@@ -59,3 +59,10 @@ Calculator for standard operations
 - Quick and simple functions that work as expected
 - Visually appealing design regardless of screen size
 - Accessibility
+
+### User Stories
+1. As a user, I want to add, subtract, multiply and divide two numbers
+2. As a user, I want to clear the input field with a AC button
+3. As a user, I want to delete incorrect number typed with DEL button
+4. As a user, I want to chain mathematical operations together until I hit the equal button, and the calculator will tell me the correct output
+
