@@ -97,4 +97,19 @@ Calculator for standard operations
 <img src="docs/wireframes/mobile.jpg">
 </details>
 
+## Technologies Used
 
+### Languages
+- HTML for structure
+- CSS for styling
+- JavaScript for interactivity
+
+### Frameworks & Tools
+- GitHub
+- Gitpod
+- Favicon.io
+- JSHint
+- Lighthouse
+- W3C Markup validation service
+- W3C Jigsaw CSS validation service 
+- WAVE WebAIM web accessibility evaluation tool
