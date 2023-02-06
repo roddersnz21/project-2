@@ -113,3 +113,13 @@ Calculator for standard operations
 - W3C Markup validation service
 - W3C Jigsaw CSS validation service 
 - WAVE WebAIM web accessibility evaluation tool
+
+## Features
+The calculator has the following features:
+
+- Perform basic arithmetic operations such as addition, subtraction, multiplication, division as well as percentage
+- Clear the input field with the AC button
+- Delete an incorrect number typed with the DEL button
+- Chain mathematical operations together 
+- Calculates the final output when equals button is clicked
+- Responsive design for different screen sizes
