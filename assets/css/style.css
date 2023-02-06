@@ -16,14 +16,31 @@ body {
     background: linear-gradient(to left, #bcd4e1, #4f6e5c);
 }
 
+/* Add styles for heading and logo */
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.heading h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
 /* Set calculator-grid display to grid and adjust properties */
 .calculator-grid {
     display: grid;
     justify-content: center;
     align-content: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    grid-template-columns: repeat(4, 85px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 70px);
 }
 
 /* Set calculator-grid button properties */
