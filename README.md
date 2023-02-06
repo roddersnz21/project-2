@@ -219,3 +219,26 @@ Website was tested on the following browsers:
 <img src="docs/user-story-testing/4-user-story.jpg">
 </details>
 
+## Bugs
+
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+
+## Deployment
+The website was deployed using GitHub Pages by following these steps:
+1. In the GitHub repository navigate to the Settings tab
+2. On the left-hand menu select Pages
+3. For the Source drop-dwon menu select: Deploy from a branch
+4. For the Branch drop-down menu select: main and hit Save button
+5. After the webpage refreshes automatically you will ses a ribbon on the top saying: "Your site is published at https://roddersnz21.github.io/project-2/
+
+You can fork the repository by following these steps:
+1. Go to the GitHub repository
+2. Click on Fork button in the upper right hand corner
+
+You can clone the repository by following these steps:
+1. Go to the GitHub repository 
+2. Click on Code button above the list of files
+3. Select if you prefer to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard
+4. Paste to your editor
+
