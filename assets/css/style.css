@@ -75,6 +75,10 @@ body {
     word-break: break-all;
 }
 
+.material-symbols-outlined {
+    transform: scale(2);
+}
+
 /* Set properties for .previous-operand */
 .output .previous-operand {
     color: rgba(255, 255, 255, .75);
