@@ -242,3 +242,11 @@ You can clone the repository by following these steps:
 3. Select if you prefer to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard
 4. Paste to your editor
 
+## Credits
+
+## Acknowledgments
+I would like to thank:
+- My mentor Dick Vlaanderen for his feedback, advice, guidance and support
+- My cohort facilitator Paul Thomas for his dedication and patience doing weekly meetings with ideas and advice
+- My wife for her support and giving me free time to work on my project
+
