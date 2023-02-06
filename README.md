@@ -66,3 +66,35 @@ Calculator for standard operations
 3. As a user, I want to delete incorrect number typed with DEL button
 4. As a user, I want to chain mathematical operations together until I hit the equal button, and the calculator will tell me the correct output
 
+## Design
+
+### Design Choices
+- Design for the calculator is minimalistic and visually appealing
+- Buttons are large enough for easy tapping or clicking on different devices
+- Layout is and organized, with clear divisions between the buttons and the input field
+- Color scheme is neutral and professional
+
+### Colour
+- The color scheme uses a combination of black and white and variations of gray, green and blue 
+- Background color has a linear effect
+
+### Fonts
+- Font choice used is Orbitron because ot its geometric typeface intended for display and it's easy to read
+
+### Structure
+
+- The structure of the calculator is organized and easy to navigate with clear divisions between the buttons and the input field
+
+### Wireframes
+
+<details><summary>Desktop</summary>
+<img src="docs/wireframes/desktop.jpg">
+</details>
+<details><summary>Tablet</summary>
+<img src="docs/wireframes/tablet.jpg">
+</details>
+<details><summary>Mobile</summary>
+<img src="docs/wireframes/mobile.jpg">
+</details>
+
+
