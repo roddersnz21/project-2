@@ -62,7 +62,7 @@ Calculator for standard operations
 - Accessibility
 
 ### User Stories
-1. As a user, I want to add, subtract, multiply and divide two numbers
+1. As a user, I want to add, subtract, multiply and divide numbers
 2. As a user, I want to clear the input field with a AC button
 3. As a user, I want to delete incorrect number typed with DEL button
 4. As a user, I want to chain mathematical operations together until I hit the equal button, and the calculator will tell me the correct output
@@ -153,3 +153,69 @@ The WAVE WebAIM web accessibility evaluation tool was used to ensure the website
 
 ### Performance 
 Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website.
+<details><summary>Mobile</summary>
+<img src="docs/validation/performance-lighthouse-mobile.jpg">
+</details>
+<details><summary>Desktop</summary>
+<img src="docs/validation/performance-lighthouse-desktop.jpg">
+</details>
+
+### Performing tests on various devices 
+The website was tested on the following devices:
+
+- iPhone 14+
+- Samsung Galaxy S10e
+- MacBook Air
+
+Website was also tested using Google Chrome Developer Tools Device Toggling option for all available device options.
+
+### Browser Compatability
+Website was tested on the following browsers:
+
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+
+### Testing user stories
+
+1. As a user, I want to add, subtract, multiply and divide numbers
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Home page | Click on number, operation, number and equals button | Display screen shows result | Works as expected |
+
+<details><summary>User Story 1</summary>
+<img src="docs/user-story-testing/1-user-story.jpg">
+</details>
+
+2. As a user, I want to clear the input field with a AC button
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Home page | Click on AC button | Display clears | Works as expected |
+
+<details><summary>User Story 2</summary>
+<img src="docs/user-story-testing/2-user-story.jpg">
+</details>
+
+
+3. As a user, I want to delete incorrect number typed with DEL button
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Home page | Click on DEL button | Display previous number | Works as expected |
+
+<details><summary>User Story 3</summary>
+<img src="docs/user-story-testing/3-user-story.jpg">
+</details>
+
+4. As a user, I want to chain mathematical operations together until I hit the equal button and the calculator displays correct output
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Home page | Click on number, operation, number, operation again and equals button| Display screen shows result | Works as expected |
+
+<details><summary>User Story 4</summary>
+<img src="docs/user-story-testing/4-user-story.jpg">
+</details>
+
