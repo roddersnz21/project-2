@@ -47,4 +47,15 @@ Calculator for standard operations
 
 ### Site Owner Goals
 - Create a functional and user friendly calculator
+- Calculator is fully responsive and able to open on different devices
 
+## User Experience
+
+### Target Audience
+- People looking at making regular calculations for day to day work and study
+
+### User Requirements and Expectations
+- Navigation system tha is simple and intuitive
+- Quick and simple functions that work as expected
+- Visually appealing design regardless of screen size
+- Accessibility
