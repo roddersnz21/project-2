@@ -28,10 +28,11 @@
     1. [HTML Validation](#HTML-validation)
     2. [CSS Validation](#CSS-validation)
     3. [JavaScript Validation](#javascript-validation)
-    4. [Performance](#performance)
-    5. [Device testing](#performing-tests-on-various-devices)
-    6. [Browser compatibility](#browser-compatability)
-    7. [Testing user stories](#testing-user-stories)
+    4. [Accessibility](#accessibility)
+    5. [Performance](#performance)
+    6. [Device testing](#performing-tests-on-various-devices)
+    7. [Browser compatibility](#browser-compatability)
+    8. [Testing user stories](#testing-user-stories)
 8. [Bugs](#Bugs)
 9. [Deployment](#deployment)
 10. [Credits](#credits)
@@ -108,10 +109,10 @@ Calculator for standard operations
 - GitHub
 - Gitpod
 - Favicon.io
-- JSHint
 - Lighthouse
 - W3C Markup validation service
 - W3C Jigsaw CSS validation service 
+- JSHint
 - WAVE WebAIM web accessibility evaluation tool
 
 ## Features
@@ -123,3 +124,32 @@ The calculator has the following features:
 - Chain mathematical operations together 
 - Calculates the final output when equals button is clicked
 - Responsive design for different screen sizes
+
+## Validation
+
+### HTML Validation
+The W3C Markup Validation Service was used to validate the HTML of the website and passed with no error or warnings.
+<details><summary>Calculator</summary>
+<img src="docs/validation/html-validation.jpg">
+</details>
+
+### CSS Validation
+The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. Page passed with one warning which no action is necessary.
+<details><summary>Calculator</summary>
+<img src="docs/validation/css-validation.jpg">
+</details>
+
+### JavaScript Validation
+JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript files. 27 warnings which I need to address.
+<details><summary>Calculator</summary>
+<img src="docs/validation/js-validation.jpg">
+</details>
+
+### Accessibility
+The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards. Page passed with 0 errors.
+<details><summary>Calculator</summary>
+<img src="docs/validation/accessibility-validation.jpg">
+</details>
+
+### Performance 
+Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website.
