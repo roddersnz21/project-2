@@ -140,7 +140,7 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS of the websit
 </details>
 
 ### JavaScript Validation
-JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript files. 27 warnings which I need to address.
+JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript files. No warnings or errors.
 <details><summary>Calculator</summary>
 <img src="docs/validation/js-validation.jpg">
 </details>
@@ -174,7 +174,7 @@ Website was tested on the following browsers:
 
 - Google Chrome
 - Mozilla Firefox
-- Microsoft Edge
+- Safari
 
 ### Testing user stories
 

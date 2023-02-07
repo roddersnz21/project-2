@@ -7,19 +7,19 @@ class Calculator {
         this.clear();
     }
 
-    // Function to clear all values
+    // Method to clear all values
     clear() {
         this.currentOperand = '';
         this.previousOperand = '';
         this.operation = undefined;
     }
 
-    // Function to delete last character from current operand
+    // Method to delete last character from current operand
     delete() {
         this.currentOperand = this.currentOperand.toString().slice(0, -1);
     }
 
-    // Function to append a number to the current operand
+    // Method to append a number to the current operand
     appendNumber(number) {
         // Prevent adding more than one decimal point
         if (number === '.' && this.currentOperand.includes('.')) return;
@@ -40,7 +40,7 @@ class Calculator {
         this.currentOperand = '';
     }
 
-    // Function to perform the computation
+    // Method to perform the computation
     compute() {
         let computation;
         const previous = parseFloat(this.previousOperand);
@@ -70,7 +70,7 @@ class Calculator {
         this.previousOperand = '';
     }
 
-    // Function to calculate the percentage of a number
+    // Method to calculate the percentage of a number
     percentage() {
         // Return if current operand is empty
         if (this.currentOperand === '') return;
@@ -78,7 +78,7 @@ class Calculator {
         this.currentOperand = parseFloat(this.currentOperand) / 100;
 }
 
-    // Function to format the display number
+    // Method to format the display number
     getDisplayNumber(number) {
         // Convert the number to a string
         const stringNumber = number.toString();
